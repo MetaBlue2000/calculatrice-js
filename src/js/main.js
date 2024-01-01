@@ -1,5 +1,5 @@
 const AFFICHAGE = document.getElementById("screen");
-const COMPLEXEMODE = document.getElementById("complexeMode");
+//--------------------------------------------------
 const CLEAR = document.getElementById("c");
 const CLEARE = document.getElementById("ce");
 const DIVISION = document.getElementById("division");
@@ -18,24 +18,13 @@ const ADDITION = document.getElementById("addition");
 const ZERO = document.getElementById("zero");
 const VIRGULE = document.getElementById("point");
 const EGALE = document.getElementById("exe");
+//--------------------------------------------
+const ALLBUTTONS = document.querySelector("button");
 
-/*window.addEventListener(
-    "keydown",
-    function (event) {
-      let str =
-        "KeyboardEvent: key='" + event.key + "' | code='" + event.code + "'";
-        console.warn(str);
-    },
-  );
 
-window.addEventListener(
-    "keydown",
-    function (clavier_numpad){
-        if(clavier_numpad.code = Numpad*){
-            
-        }
-})*/
 
-onclick(DIVISION,SEPT,HUIT,NEUF,MULTIPLICATION,QUATRE,CINQ,SIX,SOUSTRACTION,UN,DEUX,TROIS,ADDITION,ZERO,VIRGULE){
-    
-}
+window.addEventListener("keydown", function (addCaracters) {
+  if (/^Numpad[0-9AddDivideSubtractMultiplyEnterDecimal]+$/.test(addCaracters.code)) {
+      console.log(`Code = ${addCaracters.code}`);
+  }
+});
