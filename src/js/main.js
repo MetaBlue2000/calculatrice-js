@@ -23,8 +23,18 @@ const ALLBUTTONS = document.querySelector("button");
 
 
 
-window.addEventListener("keydown", function (addCaracters) {
-  if (/^Numpad[0-9AddDivideSubtractMultiplyEnterDecimal]+$/.test(addCaracters.code)) {
-      console.log(`Code = ${addCaracters.code}`);
+window.addEventListener("keydown", function (findNumpad) {
+  if (/^Numpad[0-9AddDivideSubtractMultiplyEnterDecimal]+$/.test(findNumpad.code)) {
+      console.log(`Code = ${findNumpad.code}`);
   }
 });
+
+
+
+function addNumbers(){
+  if (key === "Numpad0" || "Numpad1" || "Numpad2" || "Numpad3" || "Numpad4" || "Numpad5" || "Numpad6" || "Numpad7" || "Numpad8" || "Numpad9"){
+    console.log("Touche utilisée et afficher !")
+  }else{
+    console.log("Aucun chiffre disponible")
+  }
+}
